@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+void print(int,int);
+int  terms,n=0;
+
+int main()
+{   
+    int i = 0;
+    int j =1;
+    printf("how many terms do you want to print\n");
+    scanf("%d",&terms);
+    print(i,j);
+   
+    return 0;
+}
+
+void print(int i,int j)
+{
+    if(n==terms)
+        return;
+
+    printf("%d ",i);
+    int temp = i;
+    i = j;
+    j = temp + j;
+    n++;
+    print(i,j);
+
+    
+    //0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, 987, 1597, 2584, 4181.
+}
