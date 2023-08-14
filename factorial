@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <math.h>
+
+int factorial(int);
+int initial,k;
+int main()
+{   
+    int num;
+    printf("Of which number, Do you want to calculate the factorial\n");
+    scanf("%d",&num);
+    initial = num;
+    int fact  = factorial(num);
+    printf("factorial of %d is %d\n",initial,fact);
+   
+    return 0;
+}
+
+int factorial(int num)
+{
+    if(num == 1)
+        return 1;
+
+    return (num * factorial(num-1));
+    
+}
